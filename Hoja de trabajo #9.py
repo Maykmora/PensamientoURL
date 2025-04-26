@@ -69,3 +69,42 @@
 # numeros = [5, 2, 8, 1, 4]
 # resultado = minimo(numeros)
 # print("El mínimo de la lista", numeros, "es", resultado)
+
+#Juego 1
+# import time
+
+# def adivina_el_numero(numero_secreto, intentos_restantes, tiempo_inicio):
+#     if intentos_restantes <= 0:
+#         print(f"\n¡Se acabaron los intentos! El número era {numero_secreto}.")
+#         tiempo_total = time.time() - tiempo_inicio
+#         print(f"Tiempo total: {tiempo_total:.2f} segundos")
+#         return
+    
+#     try:
+#         intento = int(input(f"\nIntento #{6 - intentos_restantes} (te quedan {intentos_restantes}): "))
+#     except ValueError:
+#         print("Por favor, ingresa un número válido.")
+#         adivina_el_numero(numero_secreto, intentos_restantes, tiempo_inicio)
+#         return
+    
+#     if intento == numero_secreto:
+#         tiempo_total = time.time() - tiempo_inicio
+#         print(f"\n¡Felicidades! ¡Adivinaste el número en {6 - intentos_restantes} intentos!")
+#         print(f"Tiempo total: {tiempo_total:.2f} segundos")
+#         return
+#     elif intento < numero_secreto:
+#         print("El número secreto es mayor.")
+#     else:
+#         print("El número secreto es menor.")
+    
+#     adivina_el_numero(numero_secreto, intentos_restantes - 1, tiempo_inicio)
+
+# numero_secreto = int(time.time() * 1000) % 100 + 1 
+# intentos_totales = 5
+
+# print("Bienvenido al juego de Adivina el Número.")
+# print(f"Elige un número entre 1 y 100. Tienes {intentos_totales} intentos.")
+# print("¡Buena suerte!")
+
+# tiempo_inicio = time.time()  
+# adivina_el_numero(numero_secreto, intentos_totales, tiempo_inicio)
